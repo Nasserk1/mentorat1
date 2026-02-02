@@ -1,0 +1,154 @@
+{
+	"restaurant": {
+    "nom": "La Belle Assiette",
+    "telephone": "01 42 36 78 90",
+    "adresse": {
+      "rue": "15 rue de la Gastronomie",
+      "code_postal": "75002",
+      "ville": "Paris"
+    }
+  },
+  "plats": [
+    {
+      "id": 1,
+      "nom": "Salade César",
+      "description": "Salade romaine, poulet grillé, parmesan, croûtons",
+      "prix": 12.50,
+      "disponible": true,
+      "categorie": {
+        "id": 1,
+        "nom": "Entrées",
+        "description": "Pour bien commencer"
+      },
+      "ingredients": [
+        { "id": 2, "nom": "Lactose", "est_allergene": true },
+        { "id": 6, "nom": "Poulet", "est_allergene": false },
+        { "id": 7, "nom": "Légumes", "est_allergene": false }
+      ]
+    },
+    {
+      "id": 2,
+      "nom": "Soupe à l'oignon",
+      "description": "Soupe traditionnelle gratinée au fromage",
+      "prix": 9.00,
+      "disponible": true,
+      "categorie": {
+        "id": 1,
+        "nom": "Entrées",
+        "description": "Pour bien commencer"
+      },
+      "ingredients": [
+        { "id": 1, "nom": "Gluten", "est_allergene": true },
+        { "id": 2, "nom": "Lactose", "est_allergene": true }
+      ]
+    },
+    {
+      "id": 3,
+      "nom": "Burger Gourmet",
+      "description": "Bœuf Angus, cheddar affiné, bacon, sauce maison",
+      "prix": 18.50,
+      "disponible": true,
+      "categorie": {
+        "id": 2,
+        "nom": "Plats",
+        "description": "Nos spécialités"
+      },
+      "ingredients": [
+        { "id": 1, "nom": "Gluten", "est_allergene": true },
+        { "id": 2, "nom": "Lactose", "est_allergene": true },
+        { "id": 5, "nom": "Bœuf", "est_allergene": false }
+      ]
+    },
+    {
+      "id": 4,
+      "nom": "Saumon grillé",
+      "description": "Saumon frais, légumes de saison, sauce citron",
+      "prix": 22.00,
+      "disponible": true,
+      "categorie": {
+        "id": 2,
+        "nom": "Plats",
+        "description": "Nos spécialités"
+      },
+      "ingredients": [
+        { "id": 4, "nom": "Poisson", "est_allergene": true },
+        { "id": 7, "nom": "Légumes", "est_allergene": false }
+      ]
+    },
+    {
+      "id": 5,
+      "nom": "Risotto aux champignons",
+      "description": "Riz arborio, cèpes, parmesan, truffe",
+      "prix": 19.50,
+      "disponible": false,
+      "categorie": {
+        "id": 2,
+        "nom": "Plats",
+        "description": "Nos spécialités"
+      },
+      "ingredients": [
+        { "id": 2, "nom": "Lactose", "est_allergene": true },
+        { "id": 7, "nom": "Légumes", "est_allergene": false }
+      ]
+    },
+    {
+      "id": 6,
+      "nom": "Tiramisu",
+      "description": "Mascarpone, café, cacao, biscuits",
+      "prix": 8.50,
+      "disponible": true,
+      "categorie": {
+        "id": 3,
+        "nom": "Desserts",
+        "description": "Une touche sucrée"
+      },
+      "ingredients": [
+        { "id": 2, "nom": "Lactose", "est_allergene": true },
+        { "id": 3, "nom": "Œuf", "est_allergene": true }
+      ]
+    },
+    {
+      "id": 7,
+      "nom": "Fondant au chocolat",
+      "description": "Cœur coulant, glace vanille",
+      "prix": 9.50,
+      "disponible": true,
+      "categorie": {
+        "id": 3,
+        "nom": "Desserts",
+        "description": "Une touche sucrée"
+      },
+      "ingredients": [
+        { "id": 1, "nom": "Gluten", "est_allergene": true },
+        { "id": 2, "nom": "Lactose", "est_allergene": true },
+        { "id": 3, "nom": "Œuf", "est_allergene": true }
+      ]
+    },
+    {
+      "id": 8,
+      "nom": "Coca-Cola",
+      "description": "33cl",
+      "prix": 3.50,
+      "disponible": true,
+      "categorie": {
+        "id": 4,
+        "nom": "Boissons",
+        "description": "Rafraîchissements"
+      },
+      "ingredients": []
+    },
+    {
+      "id": 9,
+      "nom": "Eau minérale",
+      "description": "Evian 50cl",
+      "prix": 4.00,
+      "disponible": true,
+      "categorie": {
+        "id": 4,
+        "nom": "Boissons",
+        "description": "Rafraîchissements"
+      },
+      "ingredients": []
+    }
+  ]
+}
