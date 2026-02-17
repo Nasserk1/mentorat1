@@ -16,44 +16,66 @@
 // > "Pas de majorité"
 
 function majorityNumber (array) {
-   let counts = {};
-  for (let i = 0; i < array.length; i++) {
-    let value = array[i];
-    
-    counts[value] = (counts[value] || 0) + 1;
-         console.log(`${array[i]}`+" apparait " + count_3 + " fois");
-      } else {
-         console.log("0");
+   let count_1 = 0;
+   let count_2 = 0;
+   for (element of array) {
+      if (element % 2 === 0) {
+         count_1 += 1;
+      } 
+       else {
+         count_2 += 1;
+      }
+   } 
+
+   let counts = [];
+   for (let i = 0; i < array.length; i++) {
+      let value = array[i];
+      if ( counts[value] === undefined) {
+         counts[value] = 1
+      }
+      else {
+         counts[value] = counts[value] + 1;
+      }
+      // counts[value] = ( counts[value] || 0 ) + 1
+      // console.log(`${array[i]}`+ " apparait " + `${counts[value]}` + " fois");
+   };
+   console.table(counts); 
+
+   let maxOccurences = 0;
+   let majorityNumber = 0;
+   for ( let i=0; i < counts.length; i++) {
+      if (counts[i] !== undefined) {
+         // i --> nombre initial, counts[i] --> nombre d'apparences
+         if ( maxOccurences < counts[i]) {
+            maxOccurences = counts[i];
+            majorityNumber = i;
+         }
       }
    }
+   // count_1 -> nb elements pairs
+   // count_2 -> nb elements impairs
+   // maxOccurences -> nb Element Majoritaire
+   if ( maxOccurences !== 0 || maxOccurences !== 1 ) {
+      return majorityNumber;
+   }
+   else {
+      // Cas à gérer pour la semaine pro !
+      
+   }
+   
 }
 
-majorityNumber([1, 5, 6, 1, 5, 1])
+console.log(majorityNumber([1, 5, 6, 1, 5, 1, 6, 6, 6, 6])) // Affiche "6"
+console.log(majorityNumber([3,1,4,1])) // Affiche "1"
+console.log(majorityNumber([33,44,55,66,77])) // Affiche "Majorité Impairs"
+console.log(majorityNumber([1,2,3,4])) // Affiche "Pas de majorité"
 
-// function PairImpair (array) {
-//    let count_1 = 0;
-//    let count_2 = 0;
-//    for (element of array) {
-//    if (element % 2 === 0) {
-//       count_1 += 1;
-//    } 
-//       else {
-//    count_2 += 1;
-//       }
+// > majority([3,1,4,1]) - 
+// > "1"
 
-// } 
-// // console.log("nbre pairs :" + count_1);
-// // console.log("nombre impairs :" + count_2);
-// if (count_1> count_2) {
-//    console.log(`le tableau est composé d'une majorité de nombres pairs`);
-//    return `majorité de pairs` 
-// }
-// if (count_1< count_2) {
-//    console.log("le tableau est composé d'une majorité de nombres impairs");
-//    return `majorité de impairs`
-// }
-// else { console.log("0");}
+// > majority([33,44,55,66,77])
+// > "Majorité impairs"
 
-// }
+// > majority([1,2,3,4])
+// > "Pas de majorité"
 
-//PairImpair([3, 2, 2, 1, 6, 25, 20]);
