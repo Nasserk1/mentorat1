@@ -1,19 +1,7 @@
-// Donner l'élément qui apparaît le plus fréquemment dans un tableau d'entiers.
 
-// S'il n'y a pas d'élément qui apparaît plus qu'un autre, retourner une information indiquant si le tableau est composé en majorité de nombres pairs ou impairs.
-
-// Si le tableau n'a pas de majorité et qu'il n'a pas plus d'éléments pairs qu'impairs, retourner 0
-
-// Exemple
-
-// > majority([3,1,4,1]) - 
-// > "1"
-
-// > majority([33,44,55,66,77])
-// > "Majorité impairs"
-
-// > majority([1,2,3,4])
-// > "Pas de majorité"
+ 
+let count_1 = 0;
+let count_2 = 0;
 
 function majorityNumber (array) {
    let count_1 = 0;
@@ -26,6 +14,7 @@ function majorityNumber (array) {
          count_2 += 1;
       }
    } 
+  
 
    let counts = [];
    for (let i = 0; i < array.length; i++) {
@@ -55,12 +44,18 @@ function majorityNumber (array) {
    // count_1 -> nb elements pairs
    // count_2 -> nb elements impairs
    // maxOccurences -> nb Element Majoritaire
-   if ( maxOccurences !== 0 || maxOccurences !== 1 ) {
+   if (maxOccurences > 1){
       return majorityNumber;
    }
-   else {
-      // Cas à gérer pour la semaine pro !
-      
+   
+   else if (count_1> count_2) {
+      return "majorité de pairs"
+   }
+   if (count_1< count_2) {
+      return "majorité de impairs"
+   }
+   if (count_1 === count_2) {
+      return "égalité"
    }
    
 }
